@@ -87,34 +87,31 @@ describe('#stripMeta()', function() {
 
 describe('#processVars()', function() {
     it('replaces config vars in Markdown content', function() {
-        raneto.processVars(
-            'This is some Markdown with a %base_url%.',
-            {
-                base_url: '/base/url'
-            }
-        ).should.equal('This is some Markdown with a /base/url.');
+        raneto.config.base_url = '/base/url';
+        raneto.processVars('This is some Markdown with a %base_url%.')
+        .should.equal('This is some Markdown with a /base/url.');
     });
 });
 
 describe('#getPage()', function() {
     it('returns an array of values for a given page', function() {
-        raneto.contentDir = __dirname +'/content/';
-        var result = raneto.getPage(raneto.contentDir +'example-page.md');
+        raneto.config.content_dir = __dirname +'/content/';
+        var result = raneto.getPage(raneto.config.content_dir +'example-page.md');
         expect(result).to.have.property('slug', 'example-page');
         expect(result).to.have.property('title', 'Example Page');
         expect(result).to.have.property('body');
         expect(result).to.have.property('excerpt');
     });
     it('returns null if no page found', function() {
-        raneto.contentDir = __dirname +'/content/';
-        var result = raneto.getPage(raneto.contentDir +'nonexistent-page.md');
+        raneto.config.content_dir = __dirname +'/content/';
+        var result = raneto.getPage(raneto.config.content_dir +'nonexistent-page.md');
         expect(result).to.be.null;
     });
 });
 
 describe('#getPages()', function() {
     it('returns an array of categories and pages', function() {
-        raneto.contentDir = __dirname +'/content/';
+        raneto.config.content_dir = __dirname +'/content/';
         var result = raneto.getPages();
         expect(result[0]).to.have.property('is_index', true);
         expect(result[0].files[0]).to.have.property('title', 'Example Page');
@@ -122,7 +119,7 @@ describe('#getPages()', function() {
         expect(result[1].files[0]).to.have.property('title', 'Example Sub Page');
     });
     it('marks activePageSlug as active', function() {
-        raneto.contentDir = __dirname +'/content/';
+        raneto.config.content_dir = __dirname +'/content/';
         var result = raneto.getPages('/example-page');
         expect(result[0].files[0]).to.have.property('active', true);
         expect(result[1].files[0]).to.have.property('active', false);
@@ -131,12 +128,12 @@ describe('#getPages()', function() {
 
 describe('#doSearch()', function() {
     it('returns an array of search results', function() {
-        raneto.contentDir = __dirname +'/content/';
+        raneto.config.content_dir = __dirname +'/content/';
         var result = raneto.doSearch('example');
         expect(result).to.have.length(2);
     });
     it('returns an empty array if nothing found', function() {
-        raneto.contentDir = __dirname +'/content/';
+        raneto.config.content_dir = __dirname +'/content/';
         var result = raneto.doSearch('asdasdasd');
         expect(result).to.be.empty;
     });
