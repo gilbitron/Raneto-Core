@@ -1,6 +1,8 @@
 # Raneto Core [![](https://travis-ci.org/gilbitron/Raneto-Core.svg?branch=master)](https://travis-ci.org/gilbitron/Raneto-Core)
 
-This repository contains the core code of the Raneto framework. If you want to use Raneto, please visit the main [Raneto repository](https://github.com/gilbitron/Raneto).
+> This repository contains the core code of the Raneto framework. If you want to use Raneto, please visit the main [Raneto repository](https://github.com/gilbitron/Raneto).
+
+Raneto Core provides a framework of sorts for creating static site generators in Nodejs.
 
 ## Install
 
@@ -10,7 +12,7 @@ This repository contains the core code of the Raneto framework. If you want to u
 
 ```
 var raneto = require('raneto-core');
-raneto.cleanString('This is a string');
+raneto.getPage('path/to/a-file.md');
 ```
 
 ## Credits
