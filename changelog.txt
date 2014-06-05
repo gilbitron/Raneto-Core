@@ -1,0 +1,4 @@
+*** Raneto Core Changelog ***
+
+2014.06.04 - version 0.1.0
+ * Initial release
