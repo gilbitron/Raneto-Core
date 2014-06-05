@@ -1,4 +1,8 @@
 *** Raneto Core Changelog ***
 
+2014.06.05 - version 0.2.0
+* [New] Added formatting to doSearch results
+* [Changed] Move config options to overridable array
+
 2014.06.04 - version 0.1.0
  * Initial release
