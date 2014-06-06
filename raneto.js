@@ -133,6 +133,13 @@ var raneto = {
 
 			if(stat.isDirectory()){
 				var sort = 0;
+
+				//ignore directories that has an ignore file under it
+				var ignoreFile = raneto.config.content_dir + shortPath +'/ignore';
+				if (fs.existsSync(ignoreFile) && fs.lstatSync(ignoreFile).isFile()) {
+					return true;
+				}
+
 				if(category_sort){
 					try {
 						var sortFile = fs.readFileSync(raneto.config.content_dir + shortPath +'/sort');
