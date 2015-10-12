@@ -1,6 +1,5 @@
 {
   "name": "raneto-core",
-  "version": "0.3.0",
   "description": "Core module for Raneto",
   "author": "Gilbert Pellegrom <gilbert@pellegrom.me>",
   "license": "MIT",
