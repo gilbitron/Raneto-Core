@@ -1,5 +1,6 @@
 {
   "name": "raneto-core",
+  "version": "0.3.1"
   "description": "Core module for Raneto",
   "author": "Gilbert Pellegrom <gilbert@pellegrom.me>",
   "license": "MIT",
@@ -44,5 +45,4 @@
     "chai": "^1.9.1",
     "mocha": "^1.20.1"
   },
-  "version": "0.3.1"
 }
