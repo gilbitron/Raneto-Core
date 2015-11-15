@@ -36,7 +36,7 @@
     "glob": "6.0.1",
     "lunr": "0.6.0",
     "marked": "0.3.5",
-    "moment": "^2.6.0",
+    "moment": "2.10.6",
     "underscore": "^1.6.0",
     "underscore.string": "^2.3.3",
     "validator": "^3.13.0"
