@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "glob": "6.0.1",
-    "lunr": "^0.5.3",
+    "lunr": "0.6.0",
     "marked": "^0.3.2",
     "moment": "^2.6.0",
     "underscore": "^1.6.0",
