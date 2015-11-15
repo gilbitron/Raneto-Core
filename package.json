@@ -30,7 +30,7 @@
     }
   ],
   "engines": {
-    "node": "~0.10.0"
+    "node": ">=4.0.0"
   },
   "dependencies": {
     "glob": "^4.0.0",
