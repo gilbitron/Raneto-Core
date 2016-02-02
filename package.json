@@ -30,19 +30,19 @@
     }
   ],
   "engines": {
-    "node": "~0.10.0"
+    "node": ">=4.0.0"
   },
   "dependencies": {
-    "glob": "^4.0.0",
-    "lunr": "^0.5.3",
-    "marked": "^0.3.2",
-    "moment": "^2.6.0",
-    "underscore": "^1.6.0",
-    "underscore.string": "^2.3.3",
-    "validator": "^3.13.0"
+    "glob": "6.0.1",
+    "lunr": "0.6.0",
+    "marked": "0.3.5",
+    "moment": "2.10.6",
+    "underscore": "1.8.3",
+    "underscore.string": "3.2.2",
+    "validator": "4.2.1"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.20.1"
+    "chai": "3.4.1",
+    "mocha": "2.3.3"
   }
 }
