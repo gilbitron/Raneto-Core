@@ -30,8 +30,8 @@ var raneto = {
 		debug: false
 	},
 
-	// Regex for page meta
-	_metaRegex: /^\/\*([\s\S]*?)\*\//i,
+	// Regex for page meta (considers Byte Order Mark \uFEFF in case there's one)
+	_metaRegex: /^\uFEFF?\/\*([\s\S]*?)\*\//i,
 
 	// Makes filename safe strings
 	cleanString: function(str, use_underscore) {
