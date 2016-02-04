@@ -54,6 +54,11 @@ describe('#processMeta()', function() {
         var result = raneto.processMeta('no meta here');
         expect(result).to.be.empty;
     });
+    it('returns proper meta from file starting with a BOM character', function() {
+		raneto.config.content_dir = __dirname +'/content/';
+        var result = raneto.getPage(raneto.config.content_dir +'page-with-bom.md');
+        expect(result).to.have.property('title', 'Example Page With BOM');
+    });
 });
 
 describe('#stripMeta()', function() {
