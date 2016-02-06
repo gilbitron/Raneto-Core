@@ -135,7 +135,7 @@ describe('#doSearch()', function() {
     it('returns an array of search results', function() {
         raneto.config.content_dir = __dirname +'/content/';
         var result = raneto.doSearch('example');
-        expect(result).to.have.length(2);
+        expect(result).to.have.length(3);
     });
     it('returns an empty array if nothing found', function() {
         raneto.config.content_dir = __dirname +'/content/';
