@@ -11,7 +11,7 @@
     "site",
     "generator"
   ],
-  "main": "raneto.js",
+  "main": "lib/raneto.js",
   "scripts": {
     "test": "make test"
   },

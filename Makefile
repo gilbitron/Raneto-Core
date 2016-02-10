@@ -24,7 +24,7 @@ delint:
 
 	# JSHint
 	./node_modules/jshint/bin/jshint \
-		raneto.js                      \
+		lib/                           \
 		test/;                         \
 
 .PHONY: unit

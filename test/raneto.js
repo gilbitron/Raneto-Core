@@ -4,7 +4,7 @@
 var chai = require('chai'),
     should = chai.should(),
     expect = chai.expect,
-    raneto = require('../raneto');
+    raneto = require('../lib/raneto.js');
 
 chai.config.truncateThreshold = 0;
 
