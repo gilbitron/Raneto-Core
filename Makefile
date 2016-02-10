@@ -21,3 +21,11 @@ test:
 
 	# Run Tests
 	./node_modules/mocha/bin/mocha --reporter spec;
+
+.PHONY: delint
+delint:
+
+	# JSHint
+	./node_modules/jshint/bin/jshint \
+		raneto.js                      \
+		test/;                         \
