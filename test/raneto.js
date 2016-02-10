@@ -54,6 +54,11 @@ describe('#processMeta()', function() {
         var result = raneto.processMeta('no meta here');
         expect(result).to.be.empty;
     });
+    it('returns proper meta from file starting with a BOM character', function() {
+		raneto.config.content_dir = __dirname +'/content/';
+        var result = raneto.getPage(raneto.config.content_dir +'page-with-bom.md');
+        expect(result).to.have.property('title', 'Example Page With BOM');
+    });
 });
 
 describe('#stripMeta()', function() {
@@ -130,7 +135,7 @@ describe('#doSearch()', function() {
     it('returns an array of search results', function() {
         raneto.config.content_dir = __dirname +'/content/';
         var result = raneto.doSearch('example');
-        expect(result).to.have.length(2);
+        expect(result).to.have.length(3);
     });
     it('returns an empty array if nothing found', function() {
         raneto.config.content_dir = __dirname +'/content/';
