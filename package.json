@@ -33,7 +33,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "glob": "6.0.4",
+    "glob": "7.0.0",
     "lunr": "0.6.0",
     "marked": "0.3.5",
     "moment": "2.11.2",
