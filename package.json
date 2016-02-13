@@ -39,7 +39,7 @@
     "moment": "2.11.2",
     "underscore": "1.8.3",
     "underscore.string": "3.2.3",
-    "validator": "4.7.1"
+    "validator": "4.8.0"
   },
   "devDependencies": {
     "chai": "3.5.0",
