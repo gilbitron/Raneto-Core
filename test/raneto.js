@@ -73,6 +73,25 @@ describe('#processMeta()', function () {
     expect(result).to.have.property('title', 'Example Page With BOM');
   });
 
+  it('returns array of meta values (YAML)', function () {
+    var result = raneto.processMeta('\n'+
+      'Title: This is a title\n'+
+      'Description: This is a description\n'+
+      'Sort: 4\n'+
+      'Multi word: Value\n'+
+      '---\n');
+    expect(result).to.have.property('title', 'This is a title');
+    expect(result).to.have.property('description', 'This is a description');
+    expect(result).to.have.property('sort', '4');
+    expect(result).to.have.property('multi_word', 'Value');
+  });
+
+  it('returns proper meta from file starting with a BOM character (YAML)', function () {
+    raneto.config.content_dir = __dirname + '/content/';
+    var result = raneto.getPage(raneto.config.content_dir + 'page-with-bom-yaml.md');
+    expect(result).to.have.property('title', 'Example Page With BOM for YAML');
+  });
+
 });
 
 describe('#stripMeta()', function () {
@@ -162,7 +181,7 @@ describe('#doSearch()', function () {
   it('returns an array of search results', function () {
     raneto.config.content_dir = __dirname + '/content/';
     var result = raneto.doSearch('example');
-    expect(result).to.have.length(3);
+    expect(result).to.have.length(4);
   });
 
   it('returns an empty array if nothing found', function () {
