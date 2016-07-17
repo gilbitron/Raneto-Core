@@ -24,7 +24,7 @@ delint:
 
 	# JSHint
 	./node_modules/jshint/bin/jshint \
-		lib/                           \
+		src/                           \
 		test/;                         \
 
 .PHONY: unit

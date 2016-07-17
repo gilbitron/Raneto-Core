@@ -16,6 +16,9 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+# Transpiled library (babel -> es5)
+lib
+
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
