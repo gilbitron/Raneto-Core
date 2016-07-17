@@ -13,10 +13,10 @@
   ],
   "main": "lib/raneto.js",
   "scripts": {
-    "compile": "./node_modules/babel-cli/bin/babel.js src --out-dir lib",
-    "lint": "./node_modules/jshint/bin/jshint src/ test/",
+    "compile": "babel src --out-dir lib",
+    "lint": "jshint src/ test/",
     "prepublish": "npm run compile",
-    "test": "npm run lint & npm run compile & mocha"
+    "test": "npm run lint & npm run compile & mocha --reporter spec"
   },
   "repository": {
     "type": "git",
