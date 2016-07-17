@@ -1,6 +1,6 @@
 {
   "name": "raneto-core",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Core module for Raneto",
   "author": "Gilbert Pellegrom <gilbert@pellegrom.me>",
   "license": "MIT",
@@ -13,8 +13,8 @@
   ],
   "main": "lib/raneto.js",
   "scripts": {
-    "compile": "babel src --out-dir lib",
-    "lint": "jshint src/ test/",
+    "compile": "./node_modules/babel-cli/bin/babel.js src --out-dir lib",
+    "lint": "./node_modules/jshint/bin/jshint src/ test/",
     "prepublish": "npm run compile",
     "test": "npm run lint & npm run compile & mocha"
   },
